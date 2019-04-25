@@ -30,13 +30,19 @@
 
 				
 				</footer> <!-- end .footer -->
-			
+
+
 			</div>  <!-- end .off-canvas-content -->
 					
 		</div> <!-- end .off-canvas-wrapper -->
 
-		
-		<?php wp_footer(); ?>
+
+</div>
+
+
+
+    <?php wp_footer(); ?>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         jQuery(document).ready(function($) {
@@ -47,9 +53,16 @@
                 var first = text.shift();
                 return (text.length >= 0 ? "<h2>"+ first + "</h2> " : first) + "<h3>" + text.join(" ") + "</h3>";
             });
+
+            AOS.init({
+                duration: 1200,
+            })
+
         });
 
     </script>
+
+
 		
 	</body>
 	

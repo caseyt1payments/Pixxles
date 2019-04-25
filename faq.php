@@ -10,7 +10,7 @@ get_header();
 while ( have_posts() ) : the_post();?>
 
     <div class="row collapse">
-        <div class="large-4 medium-6 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro">
+        <div class="large-4 medium-6 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro" data-aos="fade-right">
             <?php the_content();?>
             <p style="text-align: left;"><a href="/contact/">Let's Get Started<span class="arrow"><span></span></span></a></p>
 

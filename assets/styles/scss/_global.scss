@@ -698,6 +698,13 @@ HOMEPAGE STYLES
 	}
 }
 
+.grow {
+	transition: all .2s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
 /*********************
 SECURITY PAGE STYLES
 *********************/
@@ -1252,7 +1259,7 @@ FEATURES STYLES
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		padding: 6em 4em !important;
+		padding: 5em 3em!important;
 		background-color: rgba(16, 37, 63, .8);
 
 		@include breakpoint(small only) {
@@ -1271,6 +1278,10 @@ FEATURES STYLES
 			color: $color2;
 			line-height: 1.5;
 			font-size: 1em;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			@include breakpoint(medium only) {
 				font-size: 1.15em;
 			}

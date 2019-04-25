@@ -10,9 +10,9 @@ get_header();
 while ( have_posts() ) : the_post();?>
 
         <div class="row collapse">
-            <div class="large-4 medium-6 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro hpg-hdr">
+            <div class="large-4 medium-6 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro hpg-hdr" data-aos="fade-right">
                 <?php the_content();?>
-                <p style="text-align: left;"><a href="http://pixxles.local/contact/">Let's Get Started<span class="arrow"><span></span></span></a></p>
+                <p style="text-align: left;"><a href="/contact/">Let's Get Started<span class="arrow"><span></span></span></a></p>
             </div>
         </div>
 
@@ -39,7 +39,7 @@ while ( have_posts() ) : the_post();?>
 
         <div class="row collapse hpg-two-row">
 
-            <div class="large-3 medium-3 columns hpg-two-title features-box hide-for-small-only">
+            <div class="large-3 medium-3 columns hpg-two-title features-box hide-for-small-only" data-aos="fade-right">
 
                 <?php
                 if( have_rows('homepage_section_two_repeater') ): $i = 0;
@@ -55,7 +55,7 @@ while ( have_posts() ) : the_post();?>
             </div>
 
             <div class="small-12 columns hpg-two-title features-box show-for-small-only">
-              
+                <h2>Pixxles Offers:</h2>
                 <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                     <?php
                     if( have_rows('homepage_section_two_repeater') ): $i = 0;
@@ -76,7 +76,7 @@ while ( have_posts() ) : the_post();?>
             <div class="large-6 medium-5 columns hpg-features-img" style="background-image: url(http://pixxles.flywheelsites.com/wp-content/uploads/2019/04/PIXXLES-HOMEPAGE-GIRL-AT-CASHIER.jpg);background-size: cover;min-height: 35vh;background-position: center">
 
             </div>
-            <div class="large-3 medium-4 columns">
+            <div class="large-3 medium-4 columns" data-aos="fade-left">
 
                 <?php
                 if( have_rows('homepage_section_two_repeater') ): $i = 0;
@@ -123,13 +123,15 @@ while ( have_posts() ) : the_post();?>
         </div>
     </div>
 
-    <div class="row collapse hpg-four-row" style="background-image: url( <?php the_field('homepage_section_four_background_image');?>);background-size: cover;min-height: 40vh;background-position: center">
+    <div class="row collapse hpg-four-row" style="background-image: url( <?php the_field('homepage_section_four_background_image');?>);background-size: cover;min-height: 40vh;background-position: center" >
         <div class="large-4 large-offset-2 small-8 small-offset-1 columns hpg-four-content">
-            <?php the_field('homepage_section_four_content');?>
-            <div class="hpg-four-sub-content">
-                <?php the_field('homepage_section_four_sub_content');?>
+            <div>
+                <?php the_field('homepage_section_four_content');?>
+                <div class="hpg-four-sub-content">
+                    <?php the_field('homepage_section_four_sub_content');?>
+                </div>
+                <p style="text-align: left;"><a href="http://pixxles.local/contact/">Let's Get Started<span class="arrow"><span></span></span></a></p>
             </div>
-            <p style="text-align: left;"><a href="http://pixxles.local/contact/">Let's Get Started<span class="arrow"><span></span></span></a></p>
         </div>
 
     </div>
@@ -146,7 +148,7 @@ while ( have_posts() ) : the_post();?>
                     // loop through the rows of data
                     while ( have_rows('homepage_footer_logos') ) : the_row(); ?>
 
-                        <div class="icon-item text-center">
+                        <div class="icon-item text-center grow">
                             <a href="<?php the_sub_field('link');?>">
                                 <img src="<?php the_sub_field('logo');?>">
                             </a>

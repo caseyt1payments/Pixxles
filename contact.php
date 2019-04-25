@@ -11,7 +11,7 @@ while ( have_posts() ) : the_post();?>
 
 
     <div class="row collapse">
-        <div class="large-4 medium-5 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro">
+        <div class="large-4 medium-5 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro" data-aos="fade-right">
             <?php the_content();?>
             <p style="text-align: left;"><a href="#form">Let's Get Started<span class="arrow"><span></span></span></a></p>
 
@@ -49,10 +49,11 @@ while ( have_posts() ) : the_post();?>
     </div>
 
 
-    <div class="row collapse contact-form">
+    <div class="row collapse contact-form" >
         <div class="large-6 large-centered medium-9 medium-centered small-10 small-centered columns text-center contact-form-content text-center">
-            <?php the_field('form_section');?>
-
+            <div data-aos="fade-up">
+                <?php the_field('form_section');?>
+            </div>
         </div>
     </div>
 

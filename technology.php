@@ -11,7 +11,7 @@ while ( have_posts() ) : the_post();?>
 
 
     <div class="row collapse">
-        <div class="large-4 medium-5 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro">
+        <div class="large-4 medium-5 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro" data-aos="fade-right">
             <?php the_content();?>
             <p style="text-align: left;"><a href="/contact/">Let's Get Started<span class="arrow"><span></span></span></a></p>
 
@@ -53,10 +53,10 @@ while ( have_posts() ) : the_post();?>
                  ?>
 
                 <div class="tech-repeater-item">
-                    <img src="<?php the_sub_field('icon');?>">
+                    <img src="<?php the_sub_field('icon');?>" data-aos="fade-up" data-aos-delay="50">
                     <div class="row collapse tech-repeater-content <?php if($i == 3) { echo "end"; } elseif($i == 1) { echo "odd"; };?>">
-                        <div class="firstWord"><?php the_sub_field('title');?></div>
-                        <p><?php the_sub_field('content');?></p>
+                        <div class="firstWord" data-aos="fade-up" data-aos-delay="150"><?php the_sub_field('title');?></div>
+                        <p data-aos="fade-up" data-aos-delay="250"><?php the_sub_field('content');?></p>
                     </div>
                 </div>
 

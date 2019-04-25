@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <div class="row collapse">
-    <div class="large-4 medium-6 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro">
+    <div class="large-4 medium-6 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro" data-aos="fade-right">
         <?php $post_id = 13;
             $post_object = get_post( $post_id );
             echo $post_object->post_content;?>

@@ -23,37 +23,42 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<?php wp_head(); ?>
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <?php wp_head(); ?>
 
 	</head>
-			
-	<body <?php body_class(); ?>>
 
-		<div class="off-canvas-wrapper">
+    <body>
 
-			<!-- Load off-canvas container. Feel free to remove if not using. -->
-			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+    <div <?php body_class(); ?>>
 
-			<div class="off-canvas-content" data-off-canvas-content>
+                <div class="off-canvas-wrapper">
 
-                <?php
-                if(is_page_template('home.php')) {?>
+                        <!-- Load off-canvas container. Feel free to remove if not using. -->
+                        <?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 
-				    <header class="header" role="banner" style="background-image: url(<?php echo the_post_thumbnail_url('full');?>);min-height:55vh;width:100%;background-repeat: no-repeat;background-size: cover;background-position: top center;">
+                        <div class="off-canvas-content" data-off-canvas-content>
 
-                <?php } elseif (is_search()) { ?>
+                            <?php
+                            if(is_page_template('home.php')) {?>
 
-                        <header class="header" role="banner" style="background-image: url(<?php echo the_post_thumbnail_url('full');?>);min-height:45vh;width:100%;background-repeat: no-repeat;background-size: cover;background-position:center;">
+                                <header class="header" role="banner" style="background-image: url(<?php echo the_post_thumbnail_url('full');?>);min-height:55vh;width:100%;background-repeat: no-repeat;background-size: cover;background-position: top center;">
 
-                <?php } else { ;?>
+                            <?php } elseif (is_search()) { ?>
 
-                        <header class="header" role="banner" style="background-image: url(<?php echo the_post_thumbnail_url('full');?>);min-height:45vh;width:100%;background-repeat: no-repeat;background-size: cover;background-position:center;">
+                                    <header class="header" role="banner" style="background-image: url(<?php echo the_post_thumbnail_url('full');?>);min-height:45vh;width:100%;background-repeat: no-repeat;background-size: cover;background-position:center;">
 
-                <?php };?>
+                            <?php } else { ;?>
 
-					 <!-- This navs will be applied to the topbar, above all content 
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+                                    <header class="header" role="banner" style="background-image: url(<?php echo the_post_thumbnail_url('full');?>);min-height:45vh;width:100%;background-repeat: no-repeat;background-size: cover;background-position:center;">
+
+                            <?php };?>
+
+                                 <!-- This navs will be applied to the topbar, above all content
+                                      To see additional nav styles, visit the /parts directory -->
+                                 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 
 
 

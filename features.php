@@ -10,7 +10,7 @@ get_header();
 while ( have_posts() ) : the_post();?>
 
     <div class="row collapse">
-        <div class="large-4 medium-6 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro">
+        <div class="large-4 medium-6 small-8 columns large-offset-1 medium-offset-1 small-offset-1 hpg-hdr-intro" data-aos="fade-right">
             <?php the_content();?>
             <p style="text-align: left;"><a href="/contact/">Let's Get Started<span class="arrow"><span></span></span></a></p>
 
@@ -47,10 +47,10 @@ while ( have_posts() ) : the_post();?>
 
                             ?>
 
-                                <div class="large-6 medium-6 columns text-center features-repeater-item" >
+                                <div class="large-6 medium-6 columns text-center features-repeater-item" data-aos="fade-up">
                                     <div class="firstWord"><?php the_sub_field('title');?></div>
 
-                                    <div class="row collapse features-repeater-item-content" style="background-image: url(<?php the_sub_field('repeater_image');?>);background-size: cover;min-height: 30vh;background-position: center">
+                                    <div class="row collapse features-repeater-item-content" style="background-image: url(<?php the_sub_field('repeater_image');?>);background-size: cover;min-height: 35vh;background-position: center">
                                         <div class="large-8 large-centered columns hover">
                                             <p><?php the_sub_field('content');?></p>
                                         </div>
